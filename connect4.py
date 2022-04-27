@@ -73,7 +73,7 @@ def print_board():
     print ('\n\n')
 
 
-# <--- Pushes piece and the column the player chose --->
+# <--- Pushes piece on the column the player chose --->
 def push(p, player):
     top[p] -= 1           
 
@@ -85,7 +85,7 @@ def push(p, player):
         check_four(player)
     
 
-# <--- Checks if the player that just placed a piece has had a win --->
+# <--- Checks if the player that just placed a piece has a win --->
 def check_four(player):
     global wins
 
@@ -97,7 +97,7 @@ def check_four(player):
 
 
     con=True
-    while con==True:        #A condition is used to check if after the rotation of the pieces the player has a new win
+    while (con == True):        #A condition is used to check if after the rotation of the pieces the player has a new win
         wins = []
         
         #Checks horizontal
@@ -197,7 +197,7 @@ def count_wins(player):
             pop_items()     #Removes the * and moves the rest of the board
 
             return True
-    #There was no additional wins after the pop so the loop ends
+    #There were no additional wins after the pop so the loop ends
     return False
 
 
